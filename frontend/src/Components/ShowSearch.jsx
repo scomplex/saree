@@ -13,12 +13,12 @@ export default function ShowSearch() {
 
     useEffect(() => {
         // Fetch brands and categories from the API
-        fetch('http://localhost:5000/api/getbrands')
+        fetch('https://shobhasaree.onrender.com/api/getbrands')
             .then(response => response.json())
             .then(data => setBrands(data))
             .catch(error => console.error('Error fetching brands:', error));
 
-        fetch('http://localhost:5000/api/getcategories')
+        fetch('https://shobhasaree.onrender.com/api/getcategories')
             .then(response => response.json())
             .then(data => setCategories(data))
             .catch(error => console.error('Error fetching categories:', error));
@@ -31,7 +31,7 @@ export default function ShowSearch() {
             cname: selectedCategory.cname,
         };
 
-        fetch('http://localhost:5000/api/getproducts', {
+        fetch('https://shobhasaree.onrender.com/api/getproducts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

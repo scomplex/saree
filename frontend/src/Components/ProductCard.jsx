@@ -34,7 +34,7 @@ export default function ProductCard({ pname, bname, cname, price, pimage,aquanti
     setLoading(true); // Set loading state to true
 
     try {
-      const response = await fetch('http://localhost:5000/api/sale', {
+      const response = await fetch('https://shobhasaree.onrender.com/api/sale', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(saleData),

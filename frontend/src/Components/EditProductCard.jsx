@@ -106,7 +106,7 @@ const validQuantity = parseDecimal(quantity);
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/editproduct', {
+      const response = await fetch('https://shobhasaree.onrender.com/api/editproduct', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updateData),
@@ -146,7 +146,7 @@ const validQuantity = parseDecimal(quantity);
     setDeleteClicked(true)
 
     try {
-      const response = await fetch('http://localhost:5000/api/deleteproduct', {
+      const response = await fetch('https://shobhasaree.onrender.com/api/deleteproduct', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(deleteData),

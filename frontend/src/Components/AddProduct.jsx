@@ -20,17 +20,17 @@ export default function AddProduct() {
     const [actualPrice, setActualPrice] = useState(0);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/getbrands')
+        fetch('https://shobhasaree.onrender.com/api/getbrands')
             .then(response => response.json())
             .then(data => setBrands(data))
             .catch(error => console.error('Error fetching brands:', error));
 
-        fetch('http://localhost:5000/api/getcategories')
+        fetch('https://shobhasaree.onrender.com/api/getcategories')
             .then(response => response.json())
             .then(data => setCategories(data))
             .catch(error => console.error('Error fetching categories:', error));
 
-        fetch('http://localhost:5000/api/getproductnames')
+        fetch('https://shobhasaree.onrender.com/api/getproductnames')
             .then(response => response.json())
             .then(data => setAllProductNames(data))
             .catch(error => console.error('Error fetching product names:', error));
@@ -80,7 +80,7 @@ export default function AddProduct() {
             tax:tax
         };
 
-        fetch('http://localhost:5000/api/addproduct', {
+        fetch('https://shobhasaree.onrender.com/api/addproduct', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

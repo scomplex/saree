@@ -8,7 +8,7 @@ export default function SellTable() {
   useEffect(() => {
     const fetchSales = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/getsales', {
+        const response = await fetch('https://shobhasaree.onrender.com/api/getsales', {
           method: 'GET', // Adjust the method if needed for your API
           headers: {
             'Content-Type': 'application/json',
